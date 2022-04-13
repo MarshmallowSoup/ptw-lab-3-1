@@ -108,9 +108,13 @@ int mathFive(Student* s, int amSt) {
 int progrFive(Student* s, int amSt) {
     int count = 0;
     for (int i = 0; i < amSt; i++) {
-        if (s[i].progr == 5) {
-            count += 1;
+        if (s[i].spec == 0){
+            if (s[i].progr == 5) {
+                count += 1;
+            }
         }
+        else
+        count += 0;
     }
     return count;
 }
@@ -118,9 +122,13 @@ int progrFive(Student* s, int amSt) {
 int numbFive(Student* s, int amSt) {
     int count = 0;
     for (int i = 0; i < amSt; i++) {
-        if (s[i].numb == 5) {
-            count += 1;
+        if (s[i].spec == 1) {
+            if (s[i].numb == 5) {
+                count += 1;
+            }
         }
+        else
+            count += 0;
     }
     return count;
 }
@@ -128,9 +136,13 @@ int numbFive(Student* s, int amSt) {
 int pedFive(Student* s, int amSt) {
     int count = 0;
     for (int i = 0; i < amSt; i++) {
-        if (s[i].ped == 5) {
-            count += 1;
+        if (s[i].spec >= 2 && s[i].spec < 5) {
+            if (s[i].ped == 5) {
+                count += 1;
+            }
         }
+        else
+            count += 0;
     }
     return count;
 }
